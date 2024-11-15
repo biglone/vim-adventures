@@ -33,3 +33,16 @@ If you changed the default directories navigate there instead of the directories
 If you don't want to run the application as sudo. [Dotenv](https://github.com/motdotla/dotenv#readme) package is included you can create a .env file in the install directory and add a port for example: PORT=8080 will set the port to 8080 and you can access the application server at http://localhost:8080.
 
 Have fun!
+
+## Docker
+```
+docker build -t vim-adventures .
+docker run -p 3000:3000 vim-adventures
+```
+
+VPN is required to access the Docker Hub.
+Set the VPN before running the command.
+```
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+```
